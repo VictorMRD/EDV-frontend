@@ -12,13 +12,12 @@ FROM node:${NODE_VERSION}-alpine
 
 # Use production node environment by default.
 ENV NODE_ENV dev
-ENV PORT 5173
 
 WORKDIR /usr/src/app
 
 COPY ./package.json ./package-lock.json ./
 
-RUN npm i
+RUN npm install
 
 # Download dependencies as a separate step to take advantage of Docker's caching.
 # Leverage a cache mount to /root/.npm to speed up subsequent builds.
@@ -39,4 +38,4 @@ COPY . .
 EXPOSE 5173
 
 # Run the application.
-CMD npm run dev
+CMD ["npm", "run", "dev"]
