@@ -14,5 +14,6 @@
         <Input type="text" placeholder="Username" />
         <Input type="password" placeholder="Password" />
         <Button variant="secondary" @click="login">Login</Button>
+        <p>Testing github setup</p>
     </div>
 </template>
