@@ -15,12 +15,30 @@ const router = createRouter({
       component: () => import('../views/auth/UserLogin.vue'),
     },
     {
+      path: '/sep',
+      name: 'sep',
+      children: [
+        {
+          path: 'usicamm',
+          component: () => import('../views/sep/UsicammPage.vue'),
+        },
+        {
+          path: 'SepNews',
+          component: () => import('../views/sep/SepNews.vue'),
+        }
+      ]
+    },
+    {
       path: '/teacher',
       name: 'teacher',
       children: [
         {
           path: 'materials',
-          component: import('../views/teacher/TeacherMaterial.vue'),
+          component: () => import('../views/teacher/TeacherMaterial.vue'),
+        },
+        {
+          path: 'courses',
+          component: () => import('../views/teacher/TeacherCourses.vue'),
         }
       ]
     },
