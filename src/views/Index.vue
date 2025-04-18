@@ -1,7 +1,6 @@
 <template>
     <div class="">
-         <p>Hello hey</p>
-         <Button>Hello</Button>
+         <p>Main index</p>
     </div>
 </template>
 
